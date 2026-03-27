@@ -24,16 +24,16 @@ export function NavMain({
     <SidebarGroup>
       <SidebarGroupLabel>MAIN MENU</SidebarGroupLabel>
       
-      <SidebarMenu>
+      <SidebarMenu >
         {items.map((item) => (
           <Collapsible
             key={item.title}
             defaultOpen={item.isActive}
             className="group/collapsible"
             render={<SidebarMenuItem />}>
-            <CollapsibleTrigger render={<SidebarMenuButton tooltip={item.title} />}>
+            <CollapsibleTrigger render={<SidebarMenuButton tooltip={item.title} />}className="text-sky-400" >
               {item.icon}
-              <span>{item.title}</span>
+              <span className="text-black" >{item.title}</span>
               {/* <ChevronRightIcon
                 className="ml-auto transition-transform duration-200 group-data-open/collapsible:rotate-90" /> */}
             </CollapsibleTrigger>
